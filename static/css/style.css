@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+
+.disable{
+    display: none;
+}
+
+.navigation {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.navigation__link {
+    color: #000;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Стили для основного контейнера */
+.main {
+    padding: 20px;
+    text-align: center;
+}
+
+.main__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.main__form-input {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.main__form-button {
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.main__form-button:hover{
+    background-color: #dad6d6;
+}
+
+/* Стили для блока файлов */
+.files {
+    padding: 20px;
+    text-align: center;
+}
+
+.files__block {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid gray;
+    max-width: 400px;
+}
+
+.files__name {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.files__download {
+    padding: 5px 10px;
+    background-color:#adff2f;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 15px;
+    transition: background .3s;
+}
+
+.files__download:hover {
+    background-color:#99e429;
+}
+
+.files__delete{
+    padding: 5px 10px;
+    background-color:#f81717;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 15px;
+    transition: background .3s;
+}
+
+.files__download:hover {
+    background-color:#bb1010;
+}

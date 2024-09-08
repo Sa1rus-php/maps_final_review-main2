@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>MapParser</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="{% static 'js/axios.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a id="nav_main" class="navigation__link" href="#">Main</a>
+            <a id="nav_files" class="navigation__link" href="#">Files</a>
+        </nav>
+    </header>
+    <main>
+        <div id="main" class="main">
+            <div class="container">
+                <h1 class="main__title">Map Parser</h1>
+                <form id="form" class="main__form">
+                    {% csrf_token %}
+                    <input id="input_data" min="1" max="100" type="text" class="main__form-input"></input>
+                    <button id="submit" {% if button.is_active %}disabled{% else %}{%endif%} class="main__form-button">Search</button>
+                </form>
+            </div>
+        </div>
+        <div id="files" class="files disable">
+            <div class="container">
+                <h2>Files</h2>
+                <a id="delete_button" class="files__delete" href="#">DELETE ALL</a>
+                {% for file in files %}
+                <div class="files__block">
+                    <p class="files__name">Filename: {{ file }}</p>
+                    <a class="files__download" href="media/{{ file }}">DOWNLOAD</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
